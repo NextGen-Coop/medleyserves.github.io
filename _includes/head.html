@@ -1,0 +1,42 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="disabled-adaptations" content="watch">
+  {%- seo -%}
+  {%- feed_meta -%}
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  {% assign icon_url = "/assets/ico/favicon.ico" | relative_url %}
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ icon_url }}">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ icon_url }}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ icon_url }}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ icon_url }}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ icon_url }}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ icon_url }}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ icon_url }}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ icon_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ icon_url }}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ icon_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ icon_url }}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ icon_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ icon_url }}">
+  <link rel="manifest" href="{{ icon_url | replace: 'favicon.ico', 'manifest.json' | absolute_url }}">
+  <meta name="msapplication-TileColor" content="#{{ site.theme_color }}">
+  <meta name="msapplication-TileImage" content="{{ icon_url }}">
+  <meta name="theme-color" content="#{{ site.theme_color }}">
+
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+  <link rel="stylesheet" href="{{ "/assets/css/base.css" | relative_url }}">
+
+{% if site.rss %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+{% endif %}
+
+{% if jekyll.environment == 'production' and site.google_analytics %}
+  {% include google-analytics.html %}
+{% endif %}
+</head>

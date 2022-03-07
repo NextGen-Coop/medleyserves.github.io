@@ -1,0 +1,13 @@
+{% assign name = include.name %}
+{% assign index = include.index %}
+{% assign background = include.background | prepend: "assets/img/" %}
+{% assign content = include.content %}
+<div class="slide" data-position="{{ index }}">
+  <img src="{{ background }}" alt="{{ name }}">
+  <div class="caption">
+    <strong class="slide-title">{{ name }}</strong>
+    {% unless content %}
+      <p class="slide-caption">{{ content }}</p>
+    {% endunless %}
+  </div>
+</div>

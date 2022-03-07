@@ -1,0 +1,33 @@
+{% assign contact = site.data.contact %}
+{% assign location_icon = "/assets/ico/location-pin.svg" %}
+{% assign phone_icon = "/assets/ico/ui-call.svg" %}
+{% assign mobile_icon = "/assets/ico/android-nexus.svg" %}
+{% assign fax_icon = "/assets/ico/fax.svg" %}
+<div class="footer-region-content">
+  <h4>Get In Touch</h4>
+  <ul>
+    {% if contact.address %}
+    <li><img src="{{ location_icon | relative_url }}" alt="location" />
+      {{ contact.address }}
+      {% if contact.city %}
+        {{ contact.city }}, {{ contact.state }} {{ contact.zip }}
+      {% endif %}
+    </li>
+    {% endif %}
+    {% if contact.telephone %}
+    <li><img src="{{ phone_icon | relative_url }}" alt="telephone" />
+      <a href="tel:{{ contact.telephone }}">{{ contact.telephone }}</a>
+    </li>
+    {% endif %}
+    {% if contact.mobile %}
+    <li><img src="{{ mobile_icon | relative_url }}" alt="mobile" />
+      <a href="tel:{{ contact.mobile }}">{{ contact.mobile }}</a>
+    </li>
+    {% endif %}
+    {% if contact.fax %}
+    <li><img src="{{ fax_icon | relative_url }}" alt="fax" />
+      {{ contact.fax }}
+    </li>
+    {% endif %}
+  </ul>
+</div>
