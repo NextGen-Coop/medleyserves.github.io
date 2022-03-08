@@ -37,7 +37,7 @@ collections_dir: collections
 # output: true is required if pages need to be rendered for each item.
 collections:
   permalink: /:collection/:name
-  projects:
+  services:
     output: true
 
 # Build settings
