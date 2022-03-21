@@ -1,5 +1,6 @@
 ---
 name: Certified Notary Public
+slug: notary
 layout: page
 ---
 <h1>{{ page.name }}</h1>

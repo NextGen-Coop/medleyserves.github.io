@@ -1,0 +1,10 @@
+{% assign collection = include.collection %}
+<section class="collection-list">
+  {% assign list = site[collection] %}
+  <h6>{{ collection }}</h6>
+  <ul>
+  {% for item in list %}
+    <li><a href="{{ item.url | relative_url }}">{{ item.name }}</a></li>
+  {% endfor %}
+  </ul>
+</section>

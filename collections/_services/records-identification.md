@@ -1,5 +1,6 @@
 ---
 name: Records and Identification
+slug: records-identifcation
 layout: page
 ---
 <h1>{{ page.name }}</h1>
