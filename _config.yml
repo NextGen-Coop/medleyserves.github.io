@@ -42,6 +42,7 @@ collections:
   services:
     output: true
   locations:
+    permalink: /areas-served/:name
     output: true
 
 # Build settings

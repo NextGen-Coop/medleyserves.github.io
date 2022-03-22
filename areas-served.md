@@ -10,7 +10,11 @@ menu: true
 {%- if locations -%}
   {%- for state in locations -%}
     <div class="location {{ state.slug }}">
-      <h3>{{ state.name | capitalize }}</h3>
+      <h3>
+        <a href="{{ state.url | relative_url }}">
+          {{ state.name | capitalize }}
+        </a>
+      </h3>
       {%- if state.counties -%}
       <ul class="counties">
         {%- for county in state.counties limit: 10 -%}
