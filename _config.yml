@@ -41,6 +41,8 @@ collections:
   permalink: /:collection/:name
   services:
     output: true
+  locations:
+    output: true
 
 # Build settings
 theme: minima
