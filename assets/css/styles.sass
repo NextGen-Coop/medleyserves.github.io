@@ -1,4 +1,35 @@
 ---
 ---
+$img_width: calc(300px - (10px * 2))
 body
   color: black
+
+.collection-list
+  ul > li
+    list-style: none
+    a
+      display: block
+      max-width: $img_width
+      position: relative
+      img
+        max-width: $img_width
+        max-height: auto
+      .collection-label
+        position: absolute
+        width: 100%
+        text-align: center
+        top: 75%
+        left: 50%
+        -webkit-transform: translate(-50%, -50%)
+        transform: translate(-50%, -50%)
+.site-footer
+  background-color: navy
+  color: lightgrey
+  .wrapper
+    max-width: calc(1024px - (30px * 2))
+  .footer-col-wrapper
+    color: lightgrey
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    .footer-col

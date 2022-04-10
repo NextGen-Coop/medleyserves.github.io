@@ -6,7 +6,9 @@
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         {% include cta.html %}
-        {% include collection-list.html collection="services" %}
+        <section class="collection-list">
+        {% include collection-list.html collection="services" limit=3 %}
+        </section>
       </div>
     </main>
     {% include footer.html %}

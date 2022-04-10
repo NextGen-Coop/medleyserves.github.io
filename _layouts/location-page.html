@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<article class="static-page blur">
+  {%- if content -%}
+  <section class="content">
+    {{ content }}
+  </section>
+  {%- endif -%}
+  {%- if page.collection -%}
+    {%- assign locations = site[page.collection] -%}
+    {%- if locations -%}
+      {%- for state in locations -%}
+      <div class="location {{ state.slug }}">
+        <h3>
+          <a href="{{ state.url | relative_url }}">
+            {{ state.name | capitalize }}
+          </a>
+        </h3>
+        {%- if state.counties -%}
+        <ul class="counties">
+          {%- for county in state.counties limit: 10 -%}
+            <li>{{ county | replace: "_", " " }}</li>
+          {%- endfor -%}
+        </ul>
+        {%- endif -%}
+      </div>
+      {%- endfor -%}
+    {%- endif -%}
+  {%- endif -%}
+</article>
