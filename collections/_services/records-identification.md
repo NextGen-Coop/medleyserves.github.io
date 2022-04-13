@@ -2,7 +2,6 @@
 name: Records and Identification
 slug: records-identifcation
 background: laptop-coffee.png
-layout: page
+layout: service-page
 ---
-<h1>{{ page.name }}</h1>
-<p>Records and Identification.</p>
+<p>We can find information and records for you.</p>

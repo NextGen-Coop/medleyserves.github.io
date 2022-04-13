@@ -1,10 +1,33 @@
 ---
 ---
+$page_width: calc(1024px - (30px * 2))
 $img_width: calc(300px - (10px * 2))
+
 body
   color: black
 
+header
+  background: darkred
+  color: white
+  .trigger
+    .page-link
+      color: white
+
+.site-title, .site-title:visited
+  color: white
+
+.title-background
+  position: fixed
+  width: 100%
+  background-size: contain
+  background-repeat: no-repeat
+
 .collection-list
+  ul
+    display: flex
+    justify-content: space-between
+    gap: 15px
+    flex-flow: row wrap
   ul > li
     list-style: none
     a
@@ -16,7 +39,10 @@ body
         max-height: auto
       .collection-label
         position: absolute
+        background: rgba(0, 0, 0, .5)
+        color: white
         width: 100%
+        padding: 5px 0
         text-align: center
         top: 75%
         left: 50%
@@ -25,11 +51,10 @@ body
 .site-footer
   background-color: navy
   color: lightgrey
-  .wrapper
-    max-width: calc(1024px - (30px * 2))
   .footer-col-wrapper
     color: lightgrey
     display: flex
     flex-flow: row nowrap
     justify-content: space-between
     .footer-col
+      max-width: 40%

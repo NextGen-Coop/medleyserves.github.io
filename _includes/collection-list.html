@@ -2,7 +2,7 @@
 {%- assign limit = include.limit || -1 -%}
 {%- assign list = site[collection] -%}
 {%- unless page.layout == "collection-page" -%}
-<h6>{{ collection }}</h6>
+<h6>{{ collection | capitalize }}</h6>
 {%- endunless -%}
 <ul>
 {%- for item in list limit: limit -%}

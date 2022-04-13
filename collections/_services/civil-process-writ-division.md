@@ -2,7 +2,6 @@
 name: Civil Process and Writ Division
 slug: civil-process-writ-division
 background: gavel-paper.png
-layout: page
+layout: service-page
 ---
-<h1>{{ page.name }}</h1>
-<p>Civil Process and Writ Division</p>
+<p>We can service civil docs and writs.</p>

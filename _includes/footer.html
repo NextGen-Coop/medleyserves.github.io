@@ -1,12 +1,14 @@
+{%- assign about_title = "About" -%}
+{%- assign contact_title = "Get in Touch" -%}
 <footer class="site-footer h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
   <div class="wrapper">
     <div class="footer-col-wrapper">
       <div class="footer-col">
-        {%- include footer-about.html -%}
+        {%- include footer-about.html title=about_title -%}
       </div>
       <div class="footer-col">
-        {%- include footer-contact.html -%}
+        {%- include footer-contact.html title=contact_title -%}
       </div>
     </div>
   </div>

@@ -2,7 +2,6 @@
 name: Certified Notary Public
 slug: notary
 background: notary-stamp.png
-layout: page
+layout: service-page
 ---
-<h1>{{ page.name }}</h1>
-<p>Notary of the Public</p>
+<p>We'll notarize everything you need.</p>

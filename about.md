@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 menu: true
 ---
-About {{ site.name }}
+Medley Serves & Investigations is a fast and efficient process server. We serve the entire state of Tennessee and are expanding to include Northern Arkansas in the near future.

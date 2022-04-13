@@ -1,0 +1,36 @@
+<section class="contact-form">
+  <p id="contact-form-status"></p>
+  <form name="contact-form" id="contact-form" method="POST"
+    action="#">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required
+        placeholder="Your Name">
+    </div>
+    <div>
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company"
+        placeholder="Your Business">
+    </div>
+    <div>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone"
+        placeholder="Your Number (123-456-7890)"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required
+        placeholder="Your email">
+    </div>
+    <div class="flex-column">
+      <label for="message">How can we help you?</label>
+      <br>
+      <textarea id="message" name="message" rows="5" required
+      placeholder="Leave your message here."></textarea>
+      <br>
+      <input type="submit" class="submit-button" value="Send">
+    </div>
+  </form>
+  <script type="text/javascript" src="{{ "/assets/js/email-handler.js" | relative_url }}"></script>
+</section>

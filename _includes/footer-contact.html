@@ -4,14 +4,14 @@
 {%- assign mobile_icon = "/assets/ico/android-nexus.svg" -%}
 {%- assign fax_icon = "/assets/ico/fax.svg" -%}
 <div class="footer-region-content">
-  <h4>Get In Touch</h4>
+  <h4>{{ include.title }}</h4>
   <ul>
     {%- if contact.address -%}
     <li><img src="{{ location_icon | relative_url }}" alt="location" />
       {{ contact.address }}
-      {%- if contact.city -%}
+      {% if contact.city %}
         {{ contact.city }}, {{ contact.state }} {{ contact.zip }}
-      {%- endif -%}
+      {% endif %}
     </li>
     {%- endif -%}
     {%- if contact.telephone -%}

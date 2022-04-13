@@ -7,6 +7,16 @@ html
   height: 100%
   margin: 0
 
+header
+  position: fixed
+  .wrapper
+    max-width: calc(1280px - (30px * 2))
+  .site-nav
+    .trigger
+      display: flex
+      .menu-link
+        padding: 0 20px
+
 body
   background-color: $lightish
   width: 100%
@@ -14,9 +24,20 @@ body
   margin: 0
   display: flex
   flex-flow: column nowrap
+  main
+    .wrapper
+      max-width: calc(1024px - (30px * 2))
 
-.footer-region-content
-  ul > li
-    img
-      width: 32px
-      height: 32px
+ul, ol
+  margin: 0
+
+.site-footer
+  .wrapper
+    max-width: calc(1280px - (30px * 2))
+  .footer-region-content
+    ul > li
+      list-style: none
+      img
+        width: 32px
+        height: 32px
+        filter: invert(100%)

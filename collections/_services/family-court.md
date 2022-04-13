@@ -2,7 +2,6 @@
 name: Family Court
 slug: family-court
 background: divorce.png
-layout: page
+layout: service-page
 ---
-<h1>{{ page.name }}</h1>
-<p>Family Court</p>
+<p>We can service all docs related to family matters.</p>

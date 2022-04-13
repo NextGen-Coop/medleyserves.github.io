@@ -2,7 +2,6 @@
 name: Juvenile Court
 slug: juvenile-court
 background: signature.png
-layout: page
+layout: service-page
 ---
-<h1>{{ page.name }}</h1>
-<p>Juvenile Court</p>
+<p>We service docs for juvenile court.</p>

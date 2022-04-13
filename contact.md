@@ -1,6 +1,7 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: index
+layout: contact-page
+title: Contact
+permalink: /contact/
+menu: true
 ---
+Reach out and see how we can help you.
