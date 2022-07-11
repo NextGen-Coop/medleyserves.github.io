@@ -2,25 +2,53 @@
 ---
 $page_width: calc(1024px - (30px * 2))
 $img_width: calc(300px - (10px * 2))
+$overlay_color: rgba(102, 127, 255, 0.75)
+$medley_red: rgba(227, 38, 24, 1)
+$medley_black: rgba(1, 1, 1, 1)
+
+@import fonts
+@import breakpoints
 
 body
-  color: black
+  display: flex
+  flex-direction: column
+  color: $medley_black
+  font-family: $font_work
 
 header
-  background: darkred
+  flex-shrink: 0
+  background: $medley_red
   color: white
   .trigger
     .page-link
       color: white
 
+.site-header
+  min-height: 70px
+
 .site-title, .site-title:visited
+  font-family: $font_poppins
   color: white
 
+main
+  flex: 1 0 auto
+
 .title-background
-  position: fixed
-  width: 100%
-  background-size: contain
+  min-height: 400px
+  background-size: cover
   background-repeat: no-repeat
+  h1
+    position: absolute
+    text-align: center
+    width: $page_width
+    padding: 182px 0
+    top: 31%
+    left: 50%
+    -webkit-transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)
+    background-color: $overlay_color
+    color: white
+    font-family: $font_tai
 
 .collection-list
   ul
@@ -28,17 +56,13 @@ header
     justify-content: space-between
     gap: 15px
     flex-flow: row wrap
-  ul > li
-    list-style: none
-    a
-      display: block
-      max-width: $img_width
-      position: relative
+    position: relative
+    li
+      list-style: none
       img
         max-width: $img_width
         max-height: auto
       .collection-label
-        position: absolute
         background: rgba(0, 0, 0, .5)
         color: white
         width: 100%
@@ -49,7 +73,10 @@ header
         -webkit-transform: translate(-50%, -50%)
         transform: translate(-50%, -50%)
 .site-footer
-  background-color: navy
+  flex-shrink: 0
+  bottom: 0
+  margin: auto
+  background-color: $medley_black
   color: lightgrey
   .footer-col-wrapper
     color: lightgrey
