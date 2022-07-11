@@ -9,7 +9,7 @@
   <li class="collection-item">
     <a href="{{ item.url | relative_url }}">
       {%- if item.background -%}
-      <img src="{{ item.background | prepend: "/assets/img/" }}" />
+      <img src="{{ item.background | prepend: "/assets/img/" | absolute_url }}" />
       {%- endif -%}
       <span class="collection-label">{{ item.name }}</span>
     </a>
