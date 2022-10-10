@@ -6,7 +6,7 @@
   {%- seo -%}
   {%- feed_meta -%}
   <title>{%- if page.title -%}
-    {{ page.title | escape | append: " - " }}
+    {{ page.title | escape | append: " | " }}
     {%- endif -%}
     {{ site.title | escape }}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
@@ -32,7 +32,6 @@
   <meta name="theme-color" content="#{{ site.theme_color }}">
 
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  <link rel="stylesheet" href="{{ "/assets/css/template.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
 
 {% if site.rss %}

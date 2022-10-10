@@ -6,11 +6,13 @@
 {%- endunless -%}
 <ul>
 {%- for item in list limit: limit -%}
+  {%- if item.background -%}
+    {%- assign bg = item.background | prepend: "/assets/img/" | absolute_url -%}
+    {%- assign bg_url = bg | prepend: "url(" | append: ");" -%}
+  {%- endif -%}
   <li class="collection-item">
-    <a href="{{ item.url | relative_url }}">
-      {%- if item.background -%}
-      <img src="{{ item.background | prepend: "/assets/img/" | absolute_url }}" />
-      {%- endif -%}
+    <a href="{{ item.url | relative_url }}"
+      style="background-image: {{ bg_url }}">
       <span class="collection-label">{{ item.name }}</span>
     </a>
   </li>
