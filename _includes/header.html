@@ -1,10 +1,11 @@
 <header class="site-header blur" role="banner">
 
   <div class="wrapper">
-    {% assign default_paths = site.pages | map: "path" %}
-    {% assign page_paths = site.header_pages | default: default_paths %}
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    {%- assign logo = site.logo | prepend: "/assets/img/" | absolute_url -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
-      <img src="assets/img/msi-logo.png"
+      <img src="{{ logo }}"
         title="{{ site.title }}"
         alt="{{ site.title }}" />
       <!--<span class="background-text">MSI</span>

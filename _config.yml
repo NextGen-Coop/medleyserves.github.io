@@ -20,6 +20,8 @@
 
 title: Medley Serves & Investigations
 
+logo: msi-logo.png
+
 description: >- # this means to ignore newlines until "baseurl:"
   Medley Serves & Investigations is a full-service process service office using the most current and state of the art technology for all of your process service needs.
 baseurl: "/" # the subpath of your site, e.g. /blog
